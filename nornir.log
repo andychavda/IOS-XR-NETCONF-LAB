@@ -1,0 +1,144 @@
+2024-03-05 21:40:41,459 -  nornir.core -     INFO -        run() - Running task 'load_vars' with args {} on 1 hosts
+2024-03-05 21:40:41,522 -  nornir.core -     INFO -        run() - Running task 'NETCONF_LOCK' with args {} on 1 hosts
+2024-03-05 21:40:41,534 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'Locking...' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir_scrapli\tasks\netconf\lock.py", line 25, in netconf_lock
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir_scrapli\connection.py", line 286, in open
+    connection = NetconfDriver(**parameters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli_netconf\driver\sync_driver.py", line 47, in __init__
+    super().__init__(
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli\driver\base\sync_driver.py", line 15, in __init__
+    super().__init__(**kwargs)
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli\driver\base\base_driver.py", line 207, in __init__
+    self.transport = transport_class(
+                     ^^^^^^^^^^^^^^^^
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli_netconf\transport\plugins\system\transport.py", line 17, in __init__
+    super().__init__(
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli\transport\plugins\system\transport.py", line 60, in __init__
+    raise ScrapliUnsupportedPlatform("system transport is not supported on windows devices")
+scrapli.exceptions.ScrapliUnsupportedPlatform: system transport is not supported on windows devices
+
+2024-03-05 21:40:41,535 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'NETCONF_LOCK' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "a:\Python\DEVOPS\IOS-XR-NETCONF-LAB\xr-demo.py", line 46, in lock_config
+    task.run(task=netconf_lock, target="candidate", name="Locking...")
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Locking... (failed)
+
+
+2024-03-05 21:40:41,538 -  nornir.core -  WARNING -        run() - Task 'BGP CONFIGURATION' has not been run – 0 hosts selected
+2024-03-05 21:40:41,538 -  nornir.core -  WARNING -        run() - Task 'OSPF CONFIGURATION' has not been run – 0 hosts selected
+2024-03-05 21:40:41,540 -  nornir.core -  WARNING -        run() - Task 'NTP CONFIGURATION' has not been run – 0 hosts selected
+2024-03-05 21:40:41,541 -  nornir.core -  WARNING -        run() - Task 'ACL CONFIGUTATION' has not been run – 0 hosts selected
+2024-03-05 21:40:41,541 -  nornir.core -  WARNING -        run() - Task 'NETCONF_COMMIT' has not been run – 0 hosts selected
+2024-03-05 21:40:41,542 -  nornir.core -  WARNING -        run() - Task 'NETCONF_UNLOCK' has not been run – 0 hosts selected
+2024-03-05 21:44:26,036 -  nornir.core -     INFO -        run() - Running task 'load_vars' with args {} on 1 hosts
+2024-03-05 21:44:26,064 -  nornir.core -     INFO -        run() - Running task 'NETCONF_LOCK' with args {} on 1 hosts
+2024-03-05 21:44:26,070 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'Locking...' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir_scrapli\tasks\netconf\lock.py", line 25, in netconf_lock
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir_scrapli\connection.py", line 286, in open
+    connection = NetconfDriver(**parameters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli_netconf\driver\sync_driver.py", line 47, in __init__
+    super().__init__(
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli\driver\base\sync_driver.py", line 15, in __init__
+    super().__init__(**kwargs)
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli\driver\base\base_driver.py", line 207, in __init__
+    self.transport = transport_class(
+                     ^^^^^^^^^^^^^^^^
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli_netconf\transport\plugins\system\transport.py", line 17, in __init__
+    super().__init__(
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli\transport\plugins\system\transport.py", line 60, in __init__
+    raise ScrapliUnsupportedPlatform("system transport is not supported on windows devices")
+scrapli.exceptions.ScrapliUnsupportedPlatform: system transport is not supported on windows devices
+
+2024-03-05 21:44:26,070 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'NETCONF_LOCK' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "a:\Python\DEVOPS\IOS-XR-NETCONF-LAB\xr-demo.py", line 46, in lock_config
+    task.run(task=netconf_lock, target="candidate", name="Locking...")
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Locking... (failed)
+
+
+2024-03-05 21:44:26,075 -  nornir.core -  WARNING -        run() - Task 'BGP CONFIGURATION' has not been run – 0 hosts selected
+2024-03-05 21:44:26,075 -  nornir.core -  WARNING -        run() - Task 'OSPF CONFIGURATION' has not been run – 0 hosts selected
+2024-03-05 21:44:26,075 -  nornir.core -  WARNING -        run() - Task 'NTP CONFIGURATION' has not been run – 0 hosts selected
+2024-03-05 21:44:26,075 -  nornir.core -  WARNING -        run() - Task 'ACL CONFIGUTATION' has not been run – 0 hosts selected
+2024-03-05 21:44:26,075 -  nornir.core -  WARNING -        run() - Task 'NETCONF_COMMIT' has not been run – 0 hosts selected
+2024-03-05 21:44:26,075 -  nornir.core -  WARNING -        run() - Task 'NETCONF_UNLOCK' has not been run – 0 hosts selected
+2024-03-05 21:44:35,488 -  nornir.core -     INFO -        run() - Running task 'load_vars' with args {} on 1 hosts
+2024-03-05 21:44:35,511 -  nornir.core -     INFO -        run() - Running task 'NETCONF_LOCK' with args {} on 1 hosts
+2024-03-05 21:44:35,517 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'Locking...' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir_scrapli\tasks\netconf\lock.py", line 25, in netconf_lock
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir_scrapli\connection.py", line 286, in open
+    connection = NetconfDriver(**parameters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli_netconf\driver\sync_driver.py", line 47, in __init__
+    super().__init__(
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli\driver\base\sync_driver.py", line 15, in __init__
+    super().__init__(**kwargs)
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli\driver\base\base_driver.py", line 207, in __init__
+    self.transport = transport_class(
+                     ^^^^^^^^^^^^^^^^
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli_netconf\transport\plugins\system\transport.py", line 17, in __init__
+    super().__init__(
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\scrapli\transport\plugins\system\transport.py", line 60, in __init__
+    raise ScrapliUnsupportedPlatform("system transport is not supported on windows devices")
+scrapli.exceptions.ScrapliUnsupportedPlatform: system transport is not supported on windows devices
+
+2024-03-05 21:44:35,517 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'NETCONF_LOCK' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "a:\Python\DEVOPS\IOS-XR-NETCONF-LAB\xr-demo.py", line 46, in lock_config
+    task.run(task=netconf_lock, target="candidate", name="Locking...")
+  File "C:\Users\andyc\AppData\Roaming\Python\Python311\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Locking... (failed)
+
+
+2024-03-05 21:44:35,523 -  nornir.core -  WARNING -        run() - Task 'BGP CONFIGURATION' has not been run – 0 hosts selected
+2024-03-05 21:44:35,523 -  nornir.core -  WARNING -        run() - Task 'OSPF CONFIGURATION' has not been run – 0 hosts selected
+2024-03-05 21:44:35,523 -  nornir.core -  WARNING -        run() - Task 'NTP CONFIGURATION' has not been run – 0 hosts selected
+2024-03-05 21:44:35,526 -  nornir.core -  WARNING -        run() - Task 'ACL CONFIGUTATION' has not been run – 0 hosts selected
+2024-03-05 21:44:35,526 -  nornir.core -  WARNING -        run() - Task 'NETCONF_COMMIT' has not been run – 0 hosts selected
+2024-03-05 21:44:35,526 -  nornir.core -  WARNING -        run() - Task 'NETCONF_UNLOCK' has not been run – 0 hosts selected

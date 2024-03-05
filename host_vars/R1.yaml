@@ -21,7 +21,7 @@ ospf:
         - "GigabitEthernet0/0/0/4"
         - "GigabitEthernet0/0/0/5"
 
-    - area: 51
+    - area: 510
       interfaces:
         - "GigabitEthernet0/0/0/8"
 
